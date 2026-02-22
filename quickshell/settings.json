@@ -1,0 +1,25 @@
+{
+    "settings": {
+        "bar": {
+            "fontSize": 12,
+            "monochromeTrayIcons": true,
+            "trayIconSize": 16
+        },
+        "currentTheme": "yorha",
+        "execCommands": {
+            "files": "nemo",
+            "terminal": "kitty --directory ~"
+        },
+        "militaryTimeClockFormat": true,
+        "setWallpaperToThemeWallpaper": false,
+        "systemDetails": {
+            "cpu": "Ryzen 7 3700X",
+            "gpu": "RX 9070 XT",
+            "osName": "CachyOS",
+            "osVersion": "rolling",
+            "ram": "46 GB"
+        },
+        "systemProfileImageSource": "/home/snek/avatar.jpg",
+        "version": "0.1"
+    }
+}

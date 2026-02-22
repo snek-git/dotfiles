@@ -1,0 +1,7 @@
+#!/bin/bash
+# Turn off all RGB lights (for hypridle)
+openrgb -d 2 -m off 2>/dev/null &
+openrgb -d 0 -m static -c 000000 2>/dev/null &
+openrgb -d 1 -m static -c 000000 2>/dev/null &
+openrgb -d 3 -m direct -c 000000 2>/dev/null &
+wait

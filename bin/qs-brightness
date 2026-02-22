@@ -1,0 +1,15 @@
+#!/bin/bash
+# Helper for quickshell brightness panel
+# Usage: qs-brightness get | qs-brightness set <0-100>
+
+case "$1" in
+    get)
+        ddcutil getvcp 10 --display 1 2>/dev/null \
+            | grep -oP 'current value =\s+\K[0-9]+'
+        ;;
+    set)
+        val="$2"
+        ddcutil setvcp 10 "$val" --display 1 &>/dev/null &
+        ddcutil setvcp 10 "$val" --display 2 &>/dev/null &
+        ;;
+esac

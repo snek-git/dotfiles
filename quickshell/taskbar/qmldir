@@ -1,0 +1,9 @@
+module Taskbar
+Bar 1.0 Bar.qml
+TaskbarButton 1.0 TaskbarButton.qml
+Workspaces 1.0 Workspaces.qml
+ClockWidget 1.0 ClockWidget.qml
+SysTray 1.0 SysTray.qml
+VolumeWidget 1.0 VolumeWidget.qml
+NowPlaying 1.0 NowPlaying.qml
+WeatherWidget 1.0 WeatherWidget.qml

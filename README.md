@@ -1,0 +1,18 @@
+# dotfiles
+
+CachyOS / Hyprland / Quickshell — yorha-inspired rice.
+
+## Structure
+
+| Directory | What |
+|-----------|------|
+| `hypr/` | Hyprland, hyprlock, hypridle, hyprpaper |
+| `quickshell/` | Custom bar, popups, widgets |
+| `fish/` | Fish shell config |
+| `kitty/` | Terminal |
+| `mpv/` | Media player |
+| `rofi/` | Launcher |
+| `walker/` | App launcher + yorha theme |
+| `btop/` | System monitor |
+| `bin/` | Quickshell helper scripts |
+| `scripts/` | Utility scripts |

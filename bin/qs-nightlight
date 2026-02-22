@@ -1,0 +1,19 @@
+#!/bin/bash
+# Usage: qs-nightlight on <temp_k> | qs-nightlight off
+
+export WAYLAND_DISPLAY="${WAYLAND_DISPLAY:-wayland-1}"
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/1000}"
+
+echo "[qs-nightlight] called: $1 $2 | WAYLAND=$WAYLAND_DISPLAY" >> /tmp/qs-nightlight.log
+
+pkill -x hyprsunset 2>/dev/null
+sleep 0.1
+
+case "$1" in
+    on)
+        hyprsunset -t "$2" >> /tmp/qs-nightlight.log 2>&1 &
+        ;;
+    off)
+        hyprsunset -i >> /tmp/qs-nightlight.log 2>&1 &
+        ;;
+esac

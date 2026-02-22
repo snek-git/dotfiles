@@ -1,0 +1,14 @@
+#!/bin/bash
+STATE=~/.cache/hypr-float-positions
+case "$1" in
+  save)
+    hyprctl clients -j | jq -r '.[] | select(.floating and .mapped) | "\(.address) \(.at[0]) \(.at[1])"' > "$STATE"
+    ;;
+  restore)
+    [ -f "$STATE" ] || exit 0
+    while read -r addr x y; do
+      hyprctl dispatch movewindowpixel "exact $x $y,address:$addr"
+    done < "$STATE"
+    rm "$STATE"
+    ;;
+esac

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Base directory on NTFS mount
+BASE="/mnt/windows/screenshots/Screenshots"
+
+# Monthly subfolder: YYYY-MM (e.g., 2025-09)
+SUBDIR="$(date +%Y-%m)"
+DIR="$BASE/$SUBDIR"
+
+# Ensure destination directory exists (works on NTFS)
+mkdir -p -- "$DIR"
+
+# Filename: YYYY-MM-DD_HH-MM-SS.png (no colons; safe on NTFS)
+FILENAME="$(date +%Y-%m-%d_%H-%M-%S).png"
+
+# Take area screenshot, copy to clipboard and save to DIR
+exec grimblast --freeze --notify copysave area "$DIR/$FILENAME"
+

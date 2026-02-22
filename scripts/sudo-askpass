@@ -1,0 +1,2 @@
+#!/bin/bash
+rofi -dmenu -password -p "sudo password" -lines 0

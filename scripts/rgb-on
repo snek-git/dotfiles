@@ -1,0 +1,3 @@
+#!/bin/bash
+# Restore RGB lights from saved profile (for hypridle resume)
+openrgb --profile default 2>/dev/null
