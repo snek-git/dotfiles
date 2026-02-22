@@ -2,6 +2,8 @@
 
 CachyOS / Hyprland / Quickshell — yorha-inspired rice.
 
+Heavily inspired by [diinki/linux-retroism](https://github.com/diinki/linux-retroism).
+
 ## Structure
 
 | Directory | What |
